@@ -1,0 +1,25 @@
+.nav-header {
+    
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+    
+
+    @media screen and (max-width: $breakpoint-desktop) {
+	font-size: 17px;
+    a{padding-bottom: 20px;}
+	}
+  
+}   a{
+      color: $primary-color;
+      padding-left: 2rem;
+      padding-top: 2rem;
+      text-decoration: none;
+        &:visited{
+            color: $primary-color;
+        }
+        &:focus, &:hover{
+            text-decoration: underline;
+        }
+        
+}

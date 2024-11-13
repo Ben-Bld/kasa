@@ -1,0 +1,16 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    
+    @media screen and (max-width: $breakpoint-desktop) {
+       
+          padding: 10px;
+    
+    .logo{
+       width: 40%;
+       padding: 0;
+       height: auto;
+        }
+	}
+}
