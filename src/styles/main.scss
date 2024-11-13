@@ -1,5 +1,5 @@
 @import "./Base/_base";
-@import "./Base/variables";
+@import "./Base/_variables";
 
 
 @import "../pages/home/Home";
@@ -7,5 +7,5 @@
 @import "../components/banner/_Banner";
 @import "../components/header/_Header";
 @import "../components/nav/_Nav";
-
-
+@import "../components/gallery/_Gallery";
+@import "../components/card/Card"
