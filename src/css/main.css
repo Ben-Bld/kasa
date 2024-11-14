@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   font-family: "Montserrat";
+  text-decoration: none;
 }
 
 @media screen and (min-width: 769px) {
@@ -13,9 +14,13 @@
   width: 100%;
 }
 
+.home {
+  width: 100%;
+}
+
 .banner {
   border-radius: 10px;
-  width: 90%;
+  width: 1240px;
   margin: auto;
   margin-bottom: 35px;
   position: relative;
@@ -96,6 +101,8 @@
 
 .header {
   display: flex;
+  max-width: 1240px;
+  margin: auto;
   justify-content: space-between;
   padding: 40px 70px;
 }
@@ -163,7 +170,7 @@
 
 .gallery {
   background-color: #f7f7f7;
-  width: 90%;
+  max-width: 1240px;
   margin: auto;
   border-radius: 25px;
   -webkit-border-radius: 25px;
@@ -171,16 +178,76 @@
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
 }
+@media screen and (max-width: 769px) {
+  .gallery {
+    width: 93%;
+  }
+}
 .gallery__item {
   display: inline-flex;
+  justify-content: space-around;
   margin: auto;
   padding: 0;
   width: 33%;
   text-align: center;
 }
+@media screen and (max-width: 1390px) {
+  .gallery__item {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 970px) {
+  .gallery__item {
+    width: 100%;
+  }
+}
 
 .card {
-  height: 20px;
-  width: 20px;
-  background-color: red;
+  height: 338px;
+  width: 338px;
+  background-color: #ff6060;
+  margin: 30px;
+  border-radius: 25px;
+  text-decoration: none;
+}
+.card__title {
+  position: relative;
+  top: -20%;
+  left: 5%;
+  color: #FFFFFF;
+  text-decoration: none !important;
+  text-align: left;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+}
+.card__title__:visited {
+  text-decoration: none;
+}
+@media screen and (max-width: 769px) {
+  .card__title {
+    margin: auto;
+  }
+}
+.card__cover {
+  height: 340px;
+  width: 340px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: 1;
+  border-radius: 25px;
+}
+@media screen and (max-width: 769px) {
+  .card__cover {
+    margin: auto;
+  }
+}
+.card__cover-shadow {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(5deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 0%, rgba(255, 255, 255, 0) 47%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%, rgba(126, 126, 126, 0.3113620448) 100%);
+  width: 340px;
+  height: 340px;
+  border-radius: 25px;
+  position: absolute;
+  z-index: 2;
 }

@@ -1,5 +1,55 @@
 .card {
-    height: 20px;
-    width: 20px;
-    background-color: red;
+   
+    height: 338px;
+    width: 338px;
+    background-color: $primary-color;
+    margin: 30px;
+    border-radius: 25px;
+     text-decoration: none;
+     &__title{
+    position: relative;
+    top: -20%;
+    left: 5%;
+    color: $tertiary-color;
+    text-decoration: none!important;
+    text-align: left;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    &__:visited{
+        text-decoration: none;
+    }
+    @media screen and (max-width: $breakpoint-desktop) {
+       margin:auto;
+        
+      }
+    
+}
+ &__cover{
+    height: 340px;
+    width: 340px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+       border-radius: 25px;
+
+       @media screen and (max-width: $breakpoint-desktop) {
+        margin:auto
+      }
+    }
+    
+    
+    &__cover-shadow{
+        background: rgb(255,255,255);
+        background: linear-gradient(5deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 47%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%, rgba(126,126,126,0.3113620448179272) 100%);
+       width: 340px;
+       height:  340px;
+    //    border-radius:  10px       ;
+       border-radius: 25px;
+       position: absolute;
+  
+       z-index: 2;
+    //    opacity: 50%;
+       
+}
+
 }
