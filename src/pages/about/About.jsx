@@ -10,7 +10,7 @@ export default function About() {
             <Header />
 
 
-            {/* <Footer /> */}
+            <Footer />
 
 
         </div>

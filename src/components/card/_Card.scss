@@ -1,20 +1,23 @@
 .card {
    
-    height: 338px;
-    width: 338px;
+   
+   height: 340px;
+    
+  
     background-color: $primary-color;
     margin: 30px;
-    border-radius: 25px;
+    border-radius: 10px;
      text-decoration: none;
      &__title{
+        width: 55%;
     position: relative;
-    top: -20%;
+    top: -25%;
     left: 5%;
     color: $tertiary-color;
     text-decoration: none!important;
     text-align: left;
     z-index: 3;
-    transform: translate(-50%, -50%);
+    // transform: translate(-50%, -50%);
     &__:visited{
         text-decoration: none;
     }
@@ -22,16 +25,15 @@
        margin:auto;
         
       }
-    
+   
 }
  &__cover{
     height: 340px;
-    width: 340px;
+   width: 100%;
     object-fit: cover;
     position: relative;
     z-index: 1;
-       border-radius: 25px;
-
+    border-radius: 10px;
        @media screen and (max-width: $breakpoint-desktop) {
         margin:auto
       }
@@ -40,14 +42,19 @@
     
     &__cover-shadow{
         background: rgb(255,255,255);
-        background: linear-gradient(5deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 47%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%, rgba(126,126,126,0.3113620448179272) 100%);
-       width: 340px;
-       height:  340px;
+        background: linear-gradient(5deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%, rgba(126,126,126,0.3113620448179272) 100%);
+        width: 100%;
     //    border-radius:  10px       ;
-       border-radius: 25px;
+    border-radius: 10px;
        position: absolute;
-  
+            // opacity: 100;
        z-index: 2;
+
+       &:hover{
+        background: rgb(255,255,255);
+        background: linear-gradient(5deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 45%, rgba(255,255,255,0) 100%, rgba(255,255,255,0) 100%, rgba(126,126,126,0.3113620448179272) 100%);
+       }
+       
     //    opacity: 50%;
        
 }

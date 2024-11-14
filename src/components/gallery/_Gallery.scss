@@ -1,7 +1,10 @@
 .gallery{
     background-color: $secondary-color;
     max-width: 1240px;
-    
+    width: 95%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
     margin: auto;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -9,7 +12,7 @@
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     @media screen and (max-width: $breakpoint-desktop) {
-        width: 93%;
+        // width: 93%;
         
         
       }
@@ -18,9 +21,10 @@
         display: inline-flex;
         justify-content: space-around;
   margin: auto;
-  padding: 0;
+//   padding: -50px;
   width: 33%;
-  text-align: center;
+  
+  
 
   @media screen and (max-width: $breakpoint-2) {
     width: 48%;
