@@ -8,7 +8,7 @@ export function Card(item, image) {
             <div className="card__cover-shadow"></div>
             <img className="card__cover" src={item.cover} alt="" />
             <div className="card__title">
-                <a>{item.title}</a>
+                <p>{item.title}</p>
             </div>
 
         </div>

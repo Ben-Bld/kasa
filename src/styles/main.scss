@@ -3,11 +3,15 @@
 
 
 @import "../pages/home/Home";
-@import "../pages//about/About";
+@import "../pages/about/About";
+@import "../pages/error/Error";
 
+
+@import "../components/collapse/_Collapse";
 @import "../components/banner/_Banner";
 @import "../components/header/_Header";
 @import "../components/nav/_Nav";
 @import "../components/gallery/_Gallery";
-@import "../components/card/Card";
+@import "../components/card/_Card";
+@import "../components/errorMain/ErrorMain";
 @import "../components/footer/Footer"

@@ -39,12 +39,12 @@
       opacity: 30%;
       @media screen and (max-width: $breakpoint-desktop) {
         max-height: 111px;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
-       }
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+}
     
     }
     &__title {

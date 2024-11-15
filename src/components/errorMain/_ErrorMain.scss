@@ -1,0 +1,10 @@
+.container {
+    color: $primary-color;
+    margin: auto;
+    text-align: center;
+        &__errorNumber{
+            font-size: 288px;
+            font-weight: 700;
+        }
+
+}

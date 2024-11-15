@@ -9,6 +9,7 @@ export function Gallery() {
             {logements.map((item) => (
                 <div key={item.id} className="gallery__item">
                     <Link to={`/logements/${item.id}`}>
+
                         <Card cover={item.cover} title={item.title} />
                     </Link>
                 </div>

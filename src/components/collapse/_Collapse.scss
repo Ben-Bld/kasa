@@ -1,0 +1,44 @@
+.collapse {
+    // text-align: center;
+    max-width: 80%;
+    margin: auto;
+    @media screen and (max-width: $breakpoint-2) {
+        max-width: 95%;
+       }
+
+      
+
+    &__title {
+        margin: auto;
+        max-width: 1023px;
+        height: 47px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        border-radius: 5px;
+        font-size: 24px;
+        position: relative;
+        
+        @media screen and (max-width: $breakpoint-desktop) {
+            font-size: 13px;
+           }
+
+        &__arrow{
+            position: absolute;
+            height: 14px;
+            top: 17px;
+            right:2%;
+        }
+    }
+    &__text{
+        margin: auto;
+        max-width: 1023px;
+        height: 47px;
+        background-color: $secondary-color;
+        color: $primary-color;
+        border-radius: 5px;
+        font-size: 24px;
+        @media screen and (max-width: $breakpoint-desktop) {
+            font-size: 13px;
+           }
+    }
+}
