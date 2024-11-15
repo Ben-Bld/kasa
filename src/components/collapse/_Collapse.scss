@@ -17,6 +17,10 @@
         border-radius: 5px;
         font-size: 24px;
         position: relative;
+        padding-left: 9px;
+            p{
+                padding-top: 8px;
+            }        // padding-top: 8p;
         
         @media screen and (max-width: $breakpoint-desktop) {
             font-size: 13px;
@@ -31,14 +35,21 @@
     }
     &__text{
         margin: auto;
+        margin-top: -20px;
+        padding-top: 18px;
+        padding-left: 9px;
+        padding-bottom:1px;
+        
         max-width: 1023px;
-        height: 47px;
+        // height: 247px;
         background-color: $secondary-color;
         color: $primary-color;
         border-radius: 5px;
         font-size: 24px;
+
         @media screen and (max-width: $breakpoint-desktop) {
             font-size: 13px;
            }
     }
 }
+

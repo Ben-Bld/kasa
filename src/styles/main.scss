@@ -4,9 +4,11 @@
 
 @import "../pages/home/Home";
 @import "../pages/about/About";
+@import '../pages/product/Product';
 @import "../pages/error/Error";
 
 
+@import "../components/ficheLogement/ficheLogement.scss";
 @import "../components/collapse/_Collapse";
 @import "../components/banner/_Banner";
 @import "../components/header/_Header";
