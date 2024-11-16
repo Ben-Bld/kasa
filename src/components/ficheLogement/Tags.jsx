@@ -1,7 +1,7 @@
 
 
 
-export function Rating() {
+export function Tags() {
     return (
         <div >
 
