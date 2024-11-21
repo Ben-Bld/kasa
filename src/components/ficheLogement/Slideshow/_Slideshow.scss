@@ -1,0 +1,62 @@
+.container-slideshow{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    @media screen and (max-width: $breakpoint-desktop) {
+            
+   width: 95%;
+
+    
+}
+
+    width: 78%;
+        &__leftArrow{
+            position: absolute;
+        //   background-color:  red;
+          width: 100px;
+          top: 40%;
+         left: 4vw;
+         img{
+            height: 6vw;
+         }
+        
+        }
+        &__rightArrow{
+            position: absolute;
+        //   background-color:  red;
+          width: 100px;
+          top: 40%;
+          right:4vw;
+
+          img{
+            height: 6vw;
+          }
+          
+        
+        }
+
+        &__pageNumber{
+            position: absolute;
+            color: $secondary-color;
+            //   background-color:  red;
+              left: 50%;
+              bottom: 1vw;
+        }
+    &__img{
+        height: 223px;
+        object-fit: cover;
+        width: 90%;
+        z-index: 1;
+        height: 411px;
+        border-radius: 25px;
+        @media screen and (max-width: $breakpoint-desktop) {
+            
+            max-height: 211px;
+
+        
+}
+  
+ }}
+ 
+
+ 

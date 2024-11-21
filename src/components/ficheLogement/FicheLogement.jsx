@@ -1,12 +1,12 @@
 import React from "react";
 import logements from "../../datas/logements.json"
-import { Caroussel } from "./Caroussel";
+import { Slideshow } from "./Slideshow/Slideshow";
 import { useParams } from 'react-router-dom';
-import { Host } from './Host';
-import { Lieu } from './Lieu';
-import { LogementTitle } from './LogementTitle';
-import { Rating } from './Rating';
-import { Tags } from './Tags';
+import { Host } from './Host/Host';
+import { Lieu } from "./Lieu/Lieu";
+import { LogementTitle } from './LogementTitle/LogementTitle';
+import { Rating } from './Rating/Rating';
+import { Tags } from './Tags/Tags';
 
 export function FicheLogement() {
     let { id } = useParams();
@@ -18,7 +18,7 @@ export function FicheLogement() {
     // console.log("***" + logements[1].cover)
     return (
         <div className="container-produit">
-            <Caroussel cover={logements[index].cover} id={id} />
+            <Slideshow slide={logements[index].pictures} id={id} />
             <LogementTitle />
             <Host />
             <Lieu />

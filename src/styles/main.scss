@@ -8,11 +8,19 @@
 @import "../pages/error/Error";
 
 
+@import "../components/ficheLogement/Host/Host";
+@import "../components/ficheLogement/Lieu/Lieu";
+@import "../components/ficheLogement/LogementTitle/LogementTitle";
+@import "../components/ficheLogement/Rating/Rating";
+@import "../components/ficheLogement/Slideshow/Slideshow";
+@import "../components/ficheLogement/Tags/Tags";
+
+
+
 @import "../components/ficheLogement/ficheLogement.scss";
 @import "../components/collapse/_Collapse";
 @import "../components/banner/_Banner";
 @import "../components/header/_Header";
-@import "../components/nav/_Nav";
 @import "../components/gallery/_Gallery";
 @import "../components/card/_Card";
 @import "../components/errorMain/ErrorMain";

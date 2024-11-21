@@ -18,6 +18,60 @@
   width: 100%;
 }
 
+.container-slideshow {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  width: 78%;
+}
+@media screen and (max-width: 769px) {
+  .container-slideshow {
+    width: 95%;
+  }
+}
+.container-slideshow__leftArrow {
+  position: absolute;
+  width: 100px;
+  top: 40%;
+  left: 4vw;
+}
+.container-slideshow__leftArrow img {
+  height: 6vw;
+}
+.container-slideshow__rightArrow {
+  position: absolute;
+  width: 100px;
+  top: 40%;
+  right: 4vw;
+}
+.container-slideshow__rightArrow img {
+  height: 6vw;
+}
+.container-slideshow__pageNumber {
+  position: absolute;
+  color: #F6F6F6;
+  left: 50%;
+  bottom: 1vw;
+}
+.container-slideshow__img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 90%;
+  z-index: 1;
+  height: 411px;
+  border-radius: 25px;
+}
+@media screen and (max-width: 769px) {
+  .container-slideshow__img {
+    max-height: 211px;
+  }
+}
+
+.container-produit {
+  margin: auto;
+}
+
 .collapse {
   max-width: 80%;
   margin: auto;
@@ -164,57 +218,6 @@
     padding: 0;
     height: auto;
   }
-}
-
-.nav-header {
-  margin-top: 2%;
-  font-size: 24px;
-  text-decoration: none;
-  display: flex;
-  text-wrap: nowrap;
-  display: initial;
-}
-@media screen and (max-width: 769px) {
-  .nav-header {
-    max-width: 90%;
-    font-size: 17px;
-  }
-}
-.nav-header__nav-url-on {
-  color: #ff6060;
-  padding-left: 2rem;
-  padding-top: 1em;
-  text-decoration: none;
-}
-.nav-header__nav-url-on:visited {
-  color: #ff6060;
-}
-.nav-header__nav-url-on:focus, .nav-header__nav-url-on:hover {
-  text-decoration: underline;
-}
-.nav-header__nav-url {
-  color: #ff6060;
-  padding-left: 2rem;
-  padding-top: 1em;
-  text-decoration: none;
-}
-.nav-header__nav-url:visited {
-  color: #ff6060;
-}
-.nav-header__nav-url:focus, .nav-header__nav-url:hover {
-  text-decoration: underline;
-}
-.nav-header__nav-url_on {
-  color: #ff6060;
-  padding-left: 2rem;
-  padding-top: 1em;
-  text-decoration: underline;
-}
-.nav-header__nav-url_on:visited {
-  color: #ff6060;
-}
-.nav-header__nav-url_on:focus, .nav-header__nav-url_on:hover {
-  text-decoration: underline;
 }
 
 .nav-header {
