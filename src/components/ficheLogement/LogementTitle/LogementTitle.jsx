@@ -1,10 +1,10 @@
 
 
 
-export function LogementTitle() {
+export function LogementTitle(props) {
     return (
-        <div >
 
-        </div>
+        <p className="container-title">{props.title}</p>
+
     )
 }

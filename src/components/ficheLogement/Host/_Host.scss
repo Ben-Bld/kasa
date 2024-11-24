@@ -1,0 +1,8 @@
+.container-host {
+    width: 30%;
+    display: flex;
+    &__avatar{
+        height: 64px;
+        border-radius: 50%;
+    }
+}

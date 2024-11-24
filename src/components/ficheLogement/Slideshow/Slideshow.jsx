@@ -7,46 +7,28 @@ import { useState } from "react";
 export function Slideshow(props) {
 
     let slider = props.slide
-    console.log("slide lenght = " + props.slide.length)
 
-
-    console.log(props.slide.length)
 
     const [slideValue, changeSlide] = useState(0)
+    let length = props.slide.length - 1
     function nextSlide() {
-
-        for (let i = 0; i <= props.slide.length; i++) {
+        if (slideValue < length) {
             changeSlide(slideValue + 1)
 
-            console.log(slideValue)
         }
+        else {
 
-        // if (slideValue <= slide.length) {
-        //     changeSlide(slideValue + 1)
-        //     console.log(slideValue)
-        // }
-        // else (
-        //     changeSlide(slideValue - 1)
-        // )
+            changeSlide(slideValue - (slideValue))
+        }
 
 
     }
-    function previousSlide() {
-        // if (slideValue >= props.slide.length) {
-        //     changeSlide(slideValue + 1)
-        // }
-        // else (
-        //     changeSlide(slideValue - 1)
-        // )
-
-
-        for (let i = props.slide.length; i >= 0; i--) {
-            changeSlide(slideValue - 1)
-
-            console.log(slideValue)
+    function prevSlide() {
+        if (slideValue > 0) {
+            changeSlide(slideValue - 1);
+        } else {
+            changeSlide(length);
         }
-
-
     }
 
 
@@ -54,7 +36,7 @@ export function Slideshow(props) {
     return (
         <div className="container-slideshow">
             <div className="container-slideshow__leftArrow">
-                <img onClick={previousSlide} src={left} className="container__slideshow__leftArrow__file"></img>
+                <img onClick={prevSlide} src={left} className="container__slideshow__leftArrow__file"></img>
 
 
 
@@ -64,7 +46,7 @@ export function Slideshow(props) {
             </div>
 
             <div className="container-slideshow__pageNumber">
-                <p>1/4</p>
+                <p>{slideValue + 1}/{slider.length}</p>
             </div>
 
             <img className="container-slideshow__img" src={slider[slideValue]} alt="" />

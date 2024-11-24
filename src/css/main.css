@@ -18,6 +18,22 @@
   width: 100%;
 }
 
+.container-host {
+  width: 30%;
+  display: flex;
+}
+.container-host__avatar {
+  height: 64px;
+  border-radius: 50%;
+}
+
+.container-title {
+  width: 60%;
+  font-size: 36px;
+  font-weight: 500;
+  color: #ff6060;
+}
+
 .container-slideshow {
   margin: auto;
   text-align: center;
@@ -68,7 +84,10 @@
   }
 }
 
-.container-produit {
+.container-produit__details {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
   margin: auto;
 }
 

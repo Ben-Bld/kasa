@@ -19,11 +19,12 @@ export function FicheLogement() {
     return (
         <div className="container-produit">
             <Slideshow slide={logements[index].pictures} id={id} />
-            <LogementTitle />
-            <Host />
-            <Lieu />
-            <Rating />
-            <Tags />
+            <div className="container-produit__details"><LogementTitle title={logements[index].title} />
+                <Host name={logements[index].host.name} avatar={logements[index].host.picture} />
+                <Lieu />
+                <Rating />
+                <Tags /></div>
+
         </div>
     )
 }

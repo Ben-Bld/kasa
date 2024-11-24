@@ -1,5 +1,13 @@
 .container-produit {
-    margin: auto;
-    // background-color: red;
+    
+    &__details {
+      width: 85%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }  
+
+
 }
+
 
