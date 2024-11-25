@@ -1,7 +1,8 @@
 .container-slideshow{
     margin: auto;
     text-align: center;
-    position: relative;
+    position: relative;  
+    
     @media screen and (max-width: $breakpoint-desktop) {
             
    width: 95%;
@@ -15,6 +16,7 @@
         //   background-color:  red;
           width: 100px;
           top: 40%;
+          z-index: 3;
          left: 4vw;
          img{
             height: 6vw;
@@ -27,6 +29,7 @@
           width: 100px;
           top: 40%;
           right:4vw;
+          z-index: 3;
 
           img{
             height: 6vw;
@@ -41,56 +44,46 @@
             //   background-color:  red;
               left: 50%;
               bottom: 1vw;
+              z-index: 3;
         }
-    &__img{
-        height: 223px;
-        object-fit: cover;
-        width: 90%;
-        z-index: 1;
-        height: 411px;
-        border-radius: 25px;
-        @media screen and (max-width: $breakpoint-desktop) {
-            
-            max-height: 211px;
+        &__fade  {
+          opacity: 1;
+         
+          text-align: center;
+          z-index: 0;
+          height: 6vw;
+          // opacity: 0.8;
+          width: 100%;
+          position: absolute;
+          height: 411px;
+          border-radius: 25px;
+         background-color: rgb(88, 14, 14);
+         
+                } 
+    &__img{ z-index: 0;
+      z-index: 0;
+    height: 411px;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: opacity 0.2s ease; 
 
-        
-}
-  
- }}
- 
+    &.fade-in {
+        animation: fadeIn 0.4s ease-in; 
+    }
+      @media screen and (max-width: $breakpoint-desktop) {
+          max-height: 211px;
+      }
 
- .hide {
-  display: none;
- }
+    }}
 
- @keyframes slideInRight {
-  0% {
-      transform: translateX(100%);
-      opacity: 0;
+    @keyframes fadeIn {
+      0% {
+          opacity: 0;
+          background-color: white; 
+      }
+      100% {
+          opacity: 1;
+          background-color: transparent; 
+      }
   }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-.container-slideshow__img {
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  &.slide-in-right {
-      animation: slideInRight 0.3s ease forwards;
-  }
-  &.slide-in-left {
-      animation: slideInLeft 0.3s ease forwards;
-  }
-}
