@@ -14,7 +14,6 @@ export function Slideshow(props) {
     function nextSlide() {
         if (slideValue < length) {
             changeSlide(slideValue + 1)
-
         }
         else {
 
@@ -31,22 +30,27 @@ export function Slideshow(props) {
         }
     }
 
+    function hideNext() {
+        if (length == 0) {
+            return "hide"
+        }
+    }
 
 
     return (
         <div className="container-slideshow">
             <div className="container-slideshow__leftArrow">
-                <img onClick={prevSlide} src={left} className="container__slideshow__leftArrow__file"></img>
+                <img onClick={prevSlide} src={left} className={`container__slideshow__lefttArrow__file ` + hideNext()}></img>
 
 
 
             </div>
             <div className="container-slideshow__rightArrow">
-                <img onClick={nextSlide} src={right} className="container__slideshow__rightArrow__file"></img>
+                <img onClick={nextSlide} src={right} className={`container__slideshow__rightArrow__file ` + hideNext()}></img>
             </div>
 
-            <div className="container-slideshow__pageNumber">
-                <p>{slideValue + 1}/{slider.length}</p>
+            <div className="container-slideshow__pageNumber ">
+                <p className={hideNext()}>{slideValue + 1}/{slider.length}</p>
             </div>
 
             <img className="container-slideshow__img" src={slider[slideValue]} alt="" />

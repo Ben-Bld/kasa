@@ -1,10 +1,10 @@
 
 
 
-export function Lieu() {
+export function Lieu(props) {
     return (
-        <div >
-
+        <div className="container-lieu" >
+            <p>{props.lieu}</p>
         </div>
     )
 }

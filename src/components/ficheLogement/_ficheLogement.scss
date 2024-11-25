@@ -1,6 +1,12 @@
 .container-produit {
-    
-    &__details {
+  color: $primary-color;
+  // width: 100%;
+  margin: auto;
+  &__details {
+    flex-direction: row;
+  flex-wrap: wrap;
+      display: inline-flex;
+      text-align: center;
       width: 85%;
         display: flex;
         justify-content: space-between;

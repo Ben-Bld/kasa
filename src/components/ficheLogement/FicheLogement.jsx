@@ -21,7 +21,7 @@ export function FicheLogement() {
             <Slideshow slide={logements[index].pictures} id={id} />
             <div className="container-produit__details"><LogementTitle title={logements[index].title} />
                 <Host name={logements[index].host.name} avatar={logements[index].host.picture} />
-                <Lieu />
+                <Lieu lieu={logements[index].location} />
                 <Rating />
                 <Tags /></div>
 
