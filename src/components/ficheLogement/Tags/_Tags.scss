@@ -1,0 +1,19 @@
+.container-tag {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+margin-bottom: 20px;
+    &__item button{
+
+        font-size: 14px;
+        all: unset; 
+        background-color: $primary-color;
+        color: $secondary-color;
+        border-radius: 10px;
+        min-width: 115px;
+        height: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+

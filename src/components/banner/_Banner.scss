@@ -7,6 +7,7 @@
     position: relative;
     @media screen and (max-width: $breakpoint-desktop) {
       width: 95%;
+      
       text-align: center;
      
       text-wrap: wrap;
@@ -24,6 +25,7 @@
         @media screen and (max-width: $breakpoint-desktop) {
          max-height: 111px;
          border-radius: 20px;
+         
 }
        
     }

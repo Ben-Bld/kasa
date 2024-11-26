@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import up from '../../assets/images/icons/up.svg';
 
-export function Collapse({ title, text }) {
+export function Collapse({ title, text, type }) {
     const [isOpen, setIsOpen] = useState(false);
 
     function toggleCollapse() {
@@ -9,7 +9,7 @@ export function Collapse({ title, text }) {
     }
 
     return (
-        <div className="collapse">
+        <div className={`collapse`} >
             <div className="collapse__title">
                 <p>{title}</p>
                 <img
@@ -22,6 +22,6 @@ export function Collapse({ title, text }) {
             <div className={`collapse__text ${isOpen ? 'show' : ''}`}>
                 <p>{text}</p>
             </div>
-        </div>
+        </div >
     );
 }

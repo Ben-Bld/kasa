@@ -1,7 +1,25 @@
 .container-title{
-    width: 50%;
+    // margin: auto;
     
-            font-size: 36px; 
-        font-weight: 500;
-        color: $primary-color;
-    }
+width: 70%;
+&__lieu {
+    text-align: left;
+            font-size: 18px;
+            margin-top: -3.5%;
+        }
+&__title{
+    // width: 70%;
+    
+    text-align: left;
+    margin-top: 35px;
+    width: 80%;
+    font-size: 36px; 
+    font-weight: 500;
+    color: $primary-color;
+    
+    
+    
+}
+
+
+}

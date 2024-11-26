@@ -10,15 +10,16 @@ import CollapseInfo from "../../datas/collapse.json";
 
 export default function About({ title, text }) {
     return (
-        <div className="home">
+        <div className="about">
             <Header />
-            <Banner source={bannerImg} />
+            <div className="about__banner" >  <Banner source={bannerImg} /></div>
+
 
             {CollapseInfo.map((item) => {
                 return (
-                    <div key={item.title}>
-                        <Collapse title={item.title} text={item.text} />
-                    </div>
+
+                    <Collapse key={item.title} title={item.title} text={item.text} />
+
                 );
             })}
 

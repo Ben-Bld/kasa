@@ -1,3 +1,13 @@
-.home {
+.about {
     width: 100%;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        &__banner div{   max-height: 311px;
+            background-color: transparent;
+        }
+      
+        &__banner img:first-child{  
+            max-height: 311px;
+        }
+}
 }

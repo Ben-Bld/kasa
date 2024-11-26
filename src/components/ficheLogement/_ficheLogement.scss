@@ -1,19 +1,36 @@
 .container-produit {
-  color: $primary-color;
-  // width: 100%;
+  text-align: center;
+  width: 90%;
   margin: auto;
+  color: $primary-color;
+  font-size: 18px;
+
   &__details {
-    flex-direction: row;
-  flex-wrap: wrap;
-      display: inline-flex;
-      text-align: center;
-      width: 85%;
-        display: flex;
-        justify-content: space-between;
-        margin: auto;
-    }  
+    width: 70%;
+    flex-wrap: wrap;
+    display: inline-flex;
+    flex: 1 1 0px;
+    justify-content: space-between;
+  }
+  
+  &__collapse {
+   display: flex; 
+  justify-content: space-between;
+  // gap: 10px; 
+  width: 100%;
+  flex-wrap: wrap; 
 
-
+  &___left, 
+  &___right {
+    flex: 1 1 45%; 
+    max-width: 48%; 
+    min-width: 45%; 
+    box-sizing: border-box;
+  }
+p {
+  font-size: 18px;
+}
+}
 }
 
 

@@ -1,6 +1,15 @@
 .container-host {
-    width: 20%;
     display: flex;
+    margin-top: 2%;
+    left: 10%;
+    position: relative;
+ 
+&__name {
+
+        width: 40%;
+        text-align: right;
+        margin-right: 10%;
+    }
     &__avatar{
         height: 64px;
         border-radius: 50%;

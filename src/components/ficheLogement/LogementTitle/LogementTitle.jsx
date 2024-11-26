@@ -3,8 +3,9 @@
 
 export function LogementTitle(props) {
     return (
-
-        <p className="container-title">{props.title}</p>
-
+        <div className="container-title">
+            <p className="container-title__title">{props.title}</p>
+            <p className="container-title__lieu">{props.lieu}</p>
+        </div>
     )
 }

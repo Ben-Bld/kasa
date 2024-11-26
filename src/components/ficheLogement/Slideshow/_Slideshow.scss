@@ -12,6 +12,7 @@
 
     width: 78%;
         &__leftArrow{
+          cursor: pointer;
             position: absolute;
         //   background-color:  red;
           width: 100px;
@@ -30,6 +31,7 @@
           top: 40%;
           right:4vw;
           z-index: 3;
+          cursor: pointer;
 
           img{
             height: 6vw;
@@ -66,10 +68,10 @@
     width: 90%;
     object-fit: cover;
     border-radius: 25px;
-    transition: opacity 0.2s ease; 
+    transition: opacity 0.5s ease; 
 
     &.fade-in {
-        animation: fadeIn 0.4s ease-in; 
+        animation: fadeIn 0.5s ease-in; 
     }
       @media screen and (max-width: $breakpoint-desktop) {
           max-height: 211px;
