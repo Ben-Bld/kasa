@@ -23,8 +23,9 @@
           z-index: 3;
           left: 4vw;
           
-          @media screen and (max-width: 601px) {
-            left: 0vw;
+          @media screen and (max-width: 600px) {
+            left: 0vw; 
+            top: 40%;
   
          }
          img{
@@ -38,8 +39,9 @@
           width: 100px;
           top: 40%;
           right:4vw;
-          @media screen and (max-width:$breakpoint-2) {
+          @media screen and (max-width:600px) {
             right : 0vw;
+            top: 40%;
   
          }
           z-index: 3;

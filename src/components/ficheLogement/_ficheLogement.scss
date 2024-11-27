@@ -27,7 +27,7 @@
   }
   
   &__collapse {
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       display: block;
       order: 3;
      }
@@ -45,7 +45,7 @@
   &___left, 
   &___right {
 
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
       max-width: 100%;
      }
     flex: 1 1 45%; 

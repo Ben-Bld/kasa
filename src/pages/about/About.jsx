@@ -9,23 +9,23 @@ import { Collapse } from "../../components/collapse/Collapse"
 import CollapseInfo from "../../datas/collapse.json";
 
 export default function About({ title, text }) {
-    return (
-        <div className="about">
-            <Header />
-            <div className="about__banner" >  <Banner source={bannerImg} /></div>
+    return (<> <div className="about">
+        <Header />
+        <div className="about__banner" >  <Banner source={bannerImg} /></div>
 
 
-            {CollapseInfo.map((item) => {
-                return (
+        {CollapseInfo.map((item) => {
+            return (
 
-                    <Collapse key={item.title} title={item.title} text={item.text} />
+                <Collapse key={item.title} title={item.title} text={item.text} />
 
-                );
-            })}
-
-            <Footer />
+            );
+        })}
 
 
-        </div>
+
+    </div>
+        <Footer />
+    </>
     )
 }

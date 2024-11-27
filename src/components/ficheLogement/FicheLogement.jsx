@@ -31,7 +31,7 @@ export function FicheLogement(props) {
                 <Host name={logements[index].host.name} avatar={logements[index].host.picture} />
 
                 <Tags className="tags" tags={logements[index].tags} />
-                <Rating className="rating" />
+                <Rating rating={logements[index].rating} className="rating" />
                 <div className="container-produit__collapse">
                     <div className="container-produit__collapse___left">
                         <Collapse key={"description  " + id} title="Description" text={<p>{logements[index].description}</p>} />

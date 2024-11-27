@@ -8,12 +8,13 @@ margin-bottom: 20px;
 
 flex-wrap: wrap; 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
    padding-left: 0.5%;
+   width: 90%;
    }
 
     &__item button{
-@media screen and (max-width: $breakpoint-mobile) {
+@media screen and (max-width: 700px) {
     min-width: 84px;
    font-size: 10px;
   }

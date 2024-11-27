@@ -63,9 +63,9 @@
         &__br{
           display: none;
         }
-  @media screen and (max-width: $breakpoint-desktop) {
+  @media screen and (max-width:800px) {
     width: 70%;
-    margin-top: 3%;
+    // margin-top: 3%;
     font-size: 24px;
     text-wrap: wrap;
     text-align: left;

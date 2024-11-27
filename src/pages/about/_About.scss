@@ -1,6 +1,7 @@
 .about {
     width: 100%;
 
+margin-bottom: 12%;
     @media screen and (max-width: $breakpoint-desktop) {
         &__banner div{   max-height: 311px;
             background-color: transparent;

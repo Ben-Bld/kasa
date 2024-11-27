@@ -26,11 +26,12 @@
   
   
 
-  @media screen and (max-width: $breakpoint-2) {
-    width: 500px;
+  
+  @media screen and (max-width:1200px) {
+    width: 50%;
     
   }
-  @media screen and (max-width: $breakpoint-3) {
+  @media screen and (max-width:800px) {
     width: 100%;
     
   }
