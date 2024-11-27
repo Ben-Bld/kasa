@@ -6,31 +6,31 @@ export function Slideshow(props) {
     let slider = props.slide;
 
     const [slideValue, changeSlide] = useState(0);
-    const [fade, setFade] = useState(false); // New state for fade animation
+    const [fade, setFade] = useState(false);
     let length = props.slide.length - 1;
 
     function nextSlide() {
-        setFade(true); // Trigger fade-out animation
+        setFade(true);
         setTimeout(() => {
-            setFade(false); // Reset fade state
+            setFade(false);
             if (slideValue < length) {
                 changeSlide(slideValue + 1);
             } else {
                 changeSlide(0);
             }
-        }, 500); // Match the animation duration
+        }, 500);
     }
 
     function prevSlide() {
-        setFade(true); // Trigger fade-out animation
+        setFade(true);
         setTimeout(() => {
-            setFade(false); // Reset fade state
+            setFade(false);
             if (slideValue > 0) {
                 changeSlide(slideValue - 1);
             } else {
                 changeSlide(length);
             }
-        }, 500); // Match the animation duration
+        }, 500);
     }
 
     function hideNext() {

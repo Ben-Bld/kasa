@@ -16,20 +16,12 @@ export function FicheLogement(props) {
     const index = array.map(i => i.id).indexOf(id);
 
 
-    let valeurBase = logements[index].equipments;
-    valeurBase.join("<br/>")
-    const data = [
 
-        {
-            title: 'Equipements',
-            // Créer une liste avec les équipements
-            text: logements[index].equipments.map(equipment => (
-                <p className='TextCollapse' key={equipment}>{equipment}</p>
-            ))
-        }
-    ];
 
-    console.log("data" + data)
+
+    let equipements = logements[index].equipments
+
+    console.log(equipements.equipments)
 
 
     return (
@@ -42,10 +34,18 @@ export function FicheLogement(props) {
                 <Tags tags={logements[index].tags} />
                 <div className="container-produit__collapse">
                     <div className="container-produit__collapse___left">
-                        <Collapse title="Description" text={logements[index].description} />
+                        <Collapse key={"description  " + id} title="Description" text={<p>{logements[index].description}</p>} />
                     </div>
                     <div className="container-produit__collapse___right">
-                        <Collapse title="Equipments" text={logements[index].equipments} />
+                        <Collapse key={"equipments " + id}
+                            title="Equipements"
+                            text={equipements.map((item) => (
+                                <div key={item.id} className="container-produit__collapse___right__equipments">
+                                    <p className="text-equipements" key={"equip" + item}>{item}</p>
+                                </div>
+                            ))}
+                        />
+
                     </div>
                 </div>
 

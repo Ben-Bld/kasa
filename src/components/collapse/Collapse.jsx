@@ -19,8 +19,9 @@ export function Collapse({ title, text, type }) {
                     alt="Toggle Collapse"
                 />
             </div>
-            <div className={`collapse__text ${isOpen ? 'show' : ''}`}>
-                <p>{text}</p>
+            <div key={"collapse-" + text} className={`collapse__text ${isOpen ? 'show' : ''}`}>
+
+                <span>{text}</span>
             </div>
         </div >
     );

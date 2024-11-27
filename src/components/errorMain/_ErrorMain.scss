@@ -1,10 +1,33 @@
-.container {
+.container-error {
     color: $primary-color;
     margin: auto;
     text-align: center;
         &__errorNumber{
             font-size: 288px;
             font-weight: 700;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            @media screen and (max-width: $breakpoint-2) {
+                font-size: 96px;
+                
+              }
         }
 
+        
+&__errorText{
+    font-size: 36px;
+    margin-bottom: 12%;
+    @media screen and (max-width: $breakpoint-2) {
+        font-size: 18px;
+        
+      }
+}
+&__errorLinkHome{
+    font-size: 18px;
+    text-decoration: underline;
+    @media screen and (max-width: $breakpoint-2) {
+        font-size: 14px;
+        
+      }
+}
 }
