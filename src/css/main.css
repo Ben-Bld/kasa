@@ -189,7 +189,7 @@
   box-sizing: border-box;
 }
 .container-produit__collapse___left__equipments, .container-produit__collapse___right__equipments {
-  height: 3vh;
+  height: 1.4vh;
 }
 .container-produit p {
   font-size: 18px;

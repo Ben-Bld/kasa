@@ -37,14 +37,16 @@ export function FicheLogement(props) {
                         <Collapse key={"description  " + id} title="Description" text={<p>{logements[index].description}</p>} />
                     </div>
                     <div className="container-produit__collapse___right">
-                        <Collapse key={"equipments " + id}
+                        <Collapse
+                            key={"equipments " + id}
                             title="Equipements"
-                            text={equipements.map((item) => (
-                                <div key={item.id} className="container-produit__collapse___right__equipments">
-                                    <p className="text-equipements" key={"equip" + item}>{item}</p>
+                            text={equipements.map((item, index) => (
+                                <div key={`equip-${index}`} className="container-produit__collapse___right__equipments">
+                                    <p className="text-equipements">{item}</p>
                                 </div>
                             ))}
                         />
+
 
                     </div>
                 </div>
