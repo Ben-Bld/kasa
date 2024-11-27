@@ -1,37 +1,59 @@
 .container-produit {
   text-align: center;
-  width: 90%;
+  width: 100%;
   margin: auto;
   color: $primary-color;
   font-size: 18px;
 
   &__details {
-    width: 70%;
+    @media screen and (min-width: 400px) {
+      width: 98%;
+    }
+    @media screen and (min-width: 600px) {
+      width: 80%;
+    }
+    @media screen and (min-width: 1000px) {
+      width: 70%;
+    }
+    // width: 70%;
     flex-wrap: wrap;
     display: inline-flex;
     flex: 1 1 0px;
     justify-content: space-between;
+
+  //   @media screen and (max-width: $breakpoint-mobile) {
+  //    width: 90%;
+  //  }
   }
   
   &__collapse {
+    @media screen and (max-width: 600px) {
+      display: block;
+      order: 3;
+     }
    display: flex; 
    max-height: 400px;
   justify-content: space-between;
   // gap: 10px; 
   width: 100%;
   flex-wrap: wrap; 
+  gap: 3%;
   span{
     padding: 0;
   }
 
   &___left, 
   &___right {
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
+     }
     flex: 1 1 45%; 
     max-width: 48%; 
     min-width: 45%; 
     box-sizing: border-box;
   &__equipments {
-    height: 1.4vh;
+    height: 15px;
   }
   }
   }
@@ -43,7 +65,7 @@ p {
   // height: 200px;
 }
 ul{
-  margin: 0 0 5px;
+  margin: 5px 0 5px;
 }
 }
 
@@ -53,3 +75,6 @@ ul{
  margin-top: 10px !important;
  padding: 0 !important;
 }
+
+ 
+

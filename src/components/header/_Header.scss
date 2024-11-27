@@ -1,5 +1,6 @@
 .header {
     display: flex;
+    width: 100%;
     max-width: 1240px;
     margin: auto;
     justify-content: space-between;
@@ -55,9 +56,7 @@
         padding-left: 2rem;
          padding-top: 1em;
         text-decoration: none; 
-        &__active{ 
-              // text-decoration : underline 
-          }
+       
           &:visited{
               color: $primary-color;
           }

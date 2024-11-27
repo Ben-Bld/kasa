@@ -1,10 +1,22 @@
 .container-tag {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     gap: 15px;
 margin-bottom: 20px;
-    &__item button{
 
+
+
+flex-wrap: wrap; 
+
+@media screen and (max-width: 600px) {
+   padding-left: 0.5%;
+   }
+
+    &__item button{
+@media screen and (max-width: $breakpoint-mobile) {
+    min-width: 84px;
+   font-size: 10px;
+  }
         font-size: 14px;
         all: unset; 
         background-color: $primary-color;

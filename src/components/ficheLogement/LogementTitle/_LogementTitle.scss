@@ -1,23 +1,32 @@
 .container-title{
     // margin: auto;
+    margin-bottom: 19px;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+        width: 100%;
+      }
     
-width: 70%;
+      @media screen and (min-width: 800px) {
+          width: 70%;
+      }
 &__lieu {
     text-align: left;
             font-size: 18px;
-            margin-top: -3.5%;
+
         }
 &__title{
     // width: 70%;
-    
+    margin: 10px 0px 5px 0;
     text-align: left;
-    margin-top: 35px;
     width: 80%;
     font-size: 36px; 
     font-weight: 500;
     color: $primary-color;
     
-    
+    @media screen and (max-width: $breakpoint-2) {
+        font-size: 25px;
+        width: 100%;
+    }
     
 }
 

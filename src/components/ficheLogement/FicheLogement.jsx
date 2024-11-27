@@ -30,8 +30,8 @@ export function FicheLogement(props) {
             <div className="container-produit__details"><LogementTitle title={logements[index].title} lieu={logements[index].location} />
                 <Host name={logements[index].host.name} avatar={logements[index].host.picture} />
 
-                <Rating />
-                <Tags tags={logements[index].tags} />
+                <Tags className="tags" tags={logements[index].tags} />
+                <Rating className="rating" />
                 <div className="container-produit__collapse">
                     <div className="container-produit__collapse___left">
                         <Collapse key={"description  " + id} title="Description" text={<p>{logements[index].description}</p>} />

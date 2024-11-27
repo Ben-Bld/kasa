@@ -3,12 +3,15 @@
     text-align: center;
     position: relative;  
     
-    @media screen and (max-width: $breakpoint-desktop) {
+    @media screen and (max-width: $breakpoint-2) {
             
    width: 95%;
 
     
 }
+
+
+
 
     width: 78%;
         &__leftArrow{
@@ -18,7 +21,12 @@
           width: 100px;
           top: 40%;
           z-index: 3;
-         left: 4vw;
+          left: 4vw;
+          
+          @media screen and (max-width: 601px) {
+            left: 0vw;
+  
+         }
          img{
             height: 6vw;
          }
@@ -30,6 +38,10 @@
           width: 100px;
           top: 40%;
           right:4vw;
+          @media screen and (max-width:$breakpoint-2) {
+            right : 0vw;
+  
+         }
           z-index: 3;
           cursor: pointer;
 
@@ -47,6 +59,10 @@
               left: 50%;
               bottom: 1vw;
               z-index: 3;
+
+              @media screen and (max-width: 601px) {
+  visibility: hidden;
+              }
         }
         &__fade  {
           opacity: 1;
@@ -73,8 +89,11 @@
     &.fade-in {
         animation: fadeIn 0.5s ease-in; 
     }
-      @media screen and (max-width: $breakpoint-desktop) {
-          max-height: 211px;
+    
+
+      @media screen and (max-width: 800px) {
+          height: 37vh;
+          width: 99%;
       }
 
     }}
@@ -88,4 +107,8 @@
           opacity: 1;
           background-color: transparent; 
       }
+  }
+
+  .hide {
+    visibility: hidden;
   }
