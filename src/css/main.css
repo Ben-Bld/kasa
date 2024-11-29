@@ -258,8 +258,9 @@ html {
   font-size: 18px;
 }
 .container-produit__details {
-  display: flex;
   flex-wrap: wrap;
+  display: inline-flex;
+  flex: 1 1 0px;
   justify-content: space-between;
 }
 @media screen and (min-width: 400px) {
@@ -279,21 +280,31 @@ html {
 }
 .container-produit__collapse {
   display: flex;
-  flex-wrap: wrap;
+  max-height: 400px;
   justify-content: space-between;
   width: 100%;
+  flex-wrap: wrap;
   gap: 3%;
 }
 @media screen and (max-width: 700px) {
   .container-produit__collapse {
     display: block;
+    order: 3;
   }
+}
+.container-produit__collapse span {
+  padding: 0;
 }
 .container-produit__collapse___left, .container-produit__collapse___right {
   flex: 1 1 45%;
   max-width: 48%;
   min-width: 45%;
   box-sizing: border-box;
+}
+@media screen and (max-width: 700px) {
+  .container-produit__collapse___left, .container-produit__collapse___right {
+    max-width: 100%;
+  }
 }
 .container-produit__collapse___left__equipments, .container-produit__collapse___right__equipments {
   height: 15px;
@@ -303,7 +314,11 @@ html {
   margin: 0;
   text-align: left;
 }
-.container-produit .text-equipements {
+.container-produit ul {
+  margin: 5px 0 5px;
+}
+
+.text-equipements {
   margin-top: 10px !important;
   padding: 0 !important;
 }
@@ -311,7 +326,7 @@ html {
 .collapse {
   margin: 0 auto;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1216px) {
   .collapse {
     max-width: 100%;
   }
@@ -360,6 +375,11 @@ html {
   font-size: 24px;
   transition: max-height 0.4s ease, opacity 0.4s ease;
 }
+@media screen and (max-width: 600px) {
+  .collapse__text {
+    margin-bottom: 20%;
+  }
+}
 @media screen and (max-width: 769px) {
   .collapse__text {
     min-width: 50%;
@@ -369,6 +389,15 @@ html {
   .collapse__text {
     font-size: 13px;
   }
+}
+.collapse__text.show {
+  padding-bottom: 20px;
+  display: flex;
+  max-height: 400px;
+  opacity: 1;
+  margin-bottom: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .banner {
@@ -425,6 +454,7 @@ html {
   font-weight: 500;
   text-align: center;
   z-index: 3;
+  width: 80%;
 }
 @media screen and (max-width: 800px) {
   .banner__title {
