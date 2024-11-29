@@ -1,35 +1,33 @@
-.container-title{
-    // margin: auto;
+// Style pour le conteneur principal du titre et du lieu
+.container-title {
     margin-bottom: 19px;
 
     @media screen and (max-width: $breakpoint-mobile) {
         width: 100%;
-      }
-    
-    
-      @media screen and (min-width: 800px) {
-          width: 70%;
-      }
-&__lieu {
-    text-align: left;
-            font-size: 18px;
-
-        }
-&__title{
-    // width: 70%;
-    margin: 10px 0px 5px 0;
-    text-align: left;
-    width: 80%;
-    font-size: 36px; 
-    font-weight: 500;
-    color: $primary-color;
-    
-    @media screen and (max-width: $breakpoint-2) {
-        font-size: 25px;
-        width: 100%;
     }
-    
-}
 
+    @media screen and (min-width: 800px) {
+        width: 70%;
+    }
 
+    // Style pour le lieu
+    &__lieu {
+        text-align: left;
+        font-size: 18px;
+    }
+
+    // Style pour le titre
+    &__title {
+        margin: 10px 0 5px 0;
+        text-align: left;
+        width: 80%;
+        font-size: 36px;
+        font-weight: 500;
+        color: $primary-color;
+
+        @media screen and (max-width: $breakpoint-2) {
+            font-size: 25px;
+            width: 100%;
+        }
+    }
 }

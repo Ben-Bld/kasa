@@ -1,43 +1,40 @@
 .container-error {
-    color: $primary-color;
-    margin: auto;
-    text-align: center;
+  color: $primary-color; // Couleur principale
+  margin: auto;
+  text-align: center; 
 
+  @media screen and (max-width: 700px) {
+      margin-bottom: 40%; // Ajoute un espacement important sur petits écrans
+  }
 
-    @media screen and (max-width: 700px) {
-              
-                margin-bottom: 40%;
-                
-              }
-    
-        &__errorNumber{
-            font-size: 288px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            @media screen and (max-width: 700px) {
-                font-size: 96px;
-                margin-bottom: 10%;
-                
-              }
-        }
+  &__errorNumber {
+      font-size: 288px; // Taille grande pour le numéro d'erreur
+      font-weight: 700; // Texte en gras
+      margin: 20px 0;
 
-        
-&__errorText{
-    font-size: 36px;
-    margin-bottom: 12%;
-    @media screen and (max-width: 700px) {
-        font-size: 22px;
-        margin-bottom: 20%;
+      @media screen and (max-width: 700px) {
+          font-size: 96px; // Taille réduite pour les petits écrans
+          margin-bottom: 10%;
       }
-}
-&__errorLinkHome{
-    font-size: 18px;
-    text-decoration: underline;
-    @media screen and (max-width: 700px) {
-        font-size: 14px;
-        margin-bottom: 200px;
-        
+  }
+
+  &__errorText {
+      font-size: 36px; // Texte explicatif de l'erreur
+      margin-bottom: 12%;
+
+      @media screen and (max-width: 700px) {
+          font-size: 22px; // Taille plus petite sur mobile
+          margin-bottom: 20%;
       }
-}
+  }
+
+  &__errorLinkHome {
+      font-size: 18px; // Taille du texte du lien
+      text-decoration: underline; // Lien souligné pour visibilité
+
+      @media screen and (max-width: 700px) {
+          font-size: 14px; // Lien réduit sur petits écrans
+          margin-bottom: 200px; // Espacement pour un bon affichage sur mobile
+      }
+  }
 }

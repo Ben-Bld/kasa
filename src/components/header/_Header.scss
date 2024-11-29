@@ -1,3 +1,4 @@
+// Styles pour l'en-tête
 .header {
     display: flex;
     width: 100%;
@@ -5,90 +6,61 @@
     margin: auto;
     justify-content: space-between;
     padding: 40px 70px;
-    
-    @media screen and (max-width: $breakpoint-desktop) {
-       
-          padding: 10px;
 
-          
-    
-    .logo{
-       width: 40%;
-       padding: 0;
-       height: auto;
+    @media screen and (max-width: $breakpoint-desktop) {
+        padding: 10px;
+
+        .logo {
+            width: 40%;
+            height: auto;
+            padding: 0;
         }
-	}
+    }
 }
 
+// Barre de navigation principale
 .nav-header {
-      margin-top: 2%;
-      font-size: 24px;
-      text-decoration: none;
-      display: flex;
-      
-      text-wrap: nowrap;
-      display: initial;
-      @media screen and (max-width: $breakpoint-desktop) {
-          max-width: 90%;
+    margin-top: 2%;
+    font-size: 24px;
+    text-decoration: none;
+    display: flex;
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        max-width: 90%;
         font-size: 17px;
-          // padding-top: 5%;
-  
-        }
-      &__nav-url-on{
-          color: $primary-color;
-          
-          padding-left: 2rem;
-           padding-top: 1em;
-          text-decoration: none; 
-         
-            &:visited{
-                color: $primary-color;
-            }
-            &:focus, &:hover{
-                text-decoration: underline;
-            }
-    
-           
-            }
-     &__nav-url{
+    }
+
+    // Lien actif
+    &__nav-url_on {
         color: $primary-color;
-        
         padding-left: 2rem;
-         padding-top: 1em;
-        text-decoration: none; 
-       
-          &:visited{
-              color: $primary-color;
-          }
-          &:focus, &:hover{
-              text-decoration: underline;
-          }
-  
-         
-          }
-          @media screen and (max-width: $breakpoint-desktop) {
-           
-          
-           
-              }
-            
-          
-  } 
-  
-  
-  .nav-header__nav-url_on{
-      color: $primary-color;
-      
-      padding-left: 2rem;
-       padding-top: 1em;
-      text-decoration: underline; 
-     
-        &:visited{
+        padding-top: 1em;
+        text-decoration: underline;
+
+        &:visited {
             color: $primary-color;
         }
-        &:focus, &:hover{
+
+        &:focus,
+        &:hover {
             text-decoration: underline;
         }
-  
-       
+    }
+
+    // Lien inactif
+    &__nav-url {
+        color: $primary-color;
+        padding-left: 2rem;
+        padding-top: 1em;
+        text-decoration: none;
+
+        &:visited {
+            color: $primary-color;
         }
+
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

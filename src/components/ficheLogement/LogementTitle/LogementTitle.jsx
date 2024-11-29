@@ -1,11 +1,9 @@
-
-
-
-export function LogementTitle(props) {
+// Composant LogementTitle : affiche le titre et le lieu d'un logement
+export function LogementTitle({ title, lieu }) {
     return (
         <div className="container-title">
-            <h2 className="container-title__title">{props.title}</h2>
-            <p className="container-title__lieu">{props.lieu}</p>
+            <h2 className="container-title__title">{title}</h2>
+            <p className="container-title__lieu">{lieu}</p>
         </div>
-    )
+    );
 }

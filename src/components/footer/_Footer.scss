@@ -1,23 +1,27 @@
+// Styles pour le pied de page
 .footer {
-    background-color: $footer-color ;
+    background-color: $footer-color;
     height: 209px;
     width: 100%;
-    margin: 2% auto 0% 0;
+    margin: 2% auto 0;
 
     text-align: center;
-    &__logo{
+
+    // Logo du footer
+    &__logo {
         height: 39px;
         margin-top: 3%;
-    
     }
-    &__copyright{
- 
+
+    // Texte de copyright
+    &__copyright {
         margin-top: 3%;
         font-size: 24px;
         text-align: center;
         color: $secondary-color;
+
         @media screen and (max-width: $breakpoint-desktop) {
             font-size: 12px;
-           }
+        }
     }
 }

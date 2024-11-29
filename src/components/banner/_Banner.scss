@@ -1,79 +1,61 @@
 .banner {
-    border-radius: 10px;
-    width: 95%;
-    max-width: 1240px;
-    margin: auto;
-    margin-bottom: 35px;
-    position: relative;
-    @media screen and (max-width: $breakpoint-desktop) {
-      width: 95%;
-      
+  border-radius: 10px; // Bords arrondis
+  width: 95%;
+  max-width: 1240px;
+  margin: auto;
+  margin-bottom: 35px;
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-desktop) {
+      width: 95%; // Ajustement pour les petits écrans
       text-align: center;
-     
-      text-wrap: wrap;
-      
-    }
+  }
 
-    
-  
-    &__img{
-        border-radius: 25px;
-        height: 223px;
-        object-fit: cover;
-        width: 100%;
-        z-index: 1;
-        @media screen and (max-width: $breakpoint-desktop) {
-         max-height: 111px;
-         border-radius: 20px;
-         
-}
-       
-    }
+  &__img {
+      border-radius: 25px;
+      height: 223px;
+      object-fit: cover; // Garde les proportions de l'image
+      width: 100%;
+      z-index: 1;
 
-    &__shadow{
+      @media screen and (max-width: $breakpoint-desktop) {
+          max-height: 111px; // Hauteur réduite sur petits écrans
+          border-radius: 20px;
+      }
+  }
+
+  &__shadow {
       background-color: black;
       width: 100%;
       height: 223px;
-     border-radius: 25px;
-     position: absolute;
-     top: 0;
+      border-radius: 25px;
+      position: absolute;
+      top: 0;
       z-index: 2;
-      opacity: 30%;
+      opacity: 0.3; // Ombre semi-transparente
+
       @media screen and (max-width: $breakpoint-desktop) {
-        max-height: 111px;
-        border-radius: 25px;
-        -webkit-border-radius: 25px;
-        -moz-border-radius: 25px;
-        -ms-border-radius: 25px;
-        -o-border-radius: 25px;
-}
-    
-    }
-    &__title {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color:$secondary-color;
-  font-size: 48px;
-  font-weight: 500;
-  text-align: center;
-  text-wrap: nowrap;
-  z-index: 3;
-        &__br{
-          display: none;
-        }
-  @media screen and (max-width:800px) {
-    width: 70%;
-    // margin-top: 3%;
-    font-size: 24px;
-    text-wrap: wrap;
-    text-align: left;
-    margin-left: -10%;
-    &__br{
-      display: block;
-    }
-    
+          max-height: 111px;
+          border-radius: 20px;
+      }
+  }
+
+  &__title {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $secondary-color;
+      font-size: 48px;
+      font-weight: 500;
+      text-align: center;
+      z-index: 3;
+
+      @media screen and (max-width: 800px) {
+          width: 70%;
+          font-size: 24px; // Texte plus petit pour petits écrans
+          text-align: left;
+          margin-left: -10%; 
+      }
   }
 }
-} 

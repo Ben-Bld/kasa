@@ -1,116 +1,95 @@
-.container-slideshow{
-    margin: auto;
-    text-align: center;
-    position: relative;  
-    
-    @media screen and (max-width: $breakpoint-2) {
-            
-   width: 95%;
+// Conteneur principal pour le carrousel
+.container-slideshow {
+  margin: auto;
+  text-align: center;
+  position: relative;
+  width: 78%;
 
-    
-}
+  @media screen and (max-width: $breakpoint-2) {
+      width: 95%;
+  }
 
+  // Flèche gauche
+  &__leftArrow {
+      cursor: pointer;
+      position: absolute;
+      width: 100px;
+      top: 40%;
+      left: 4vw;
+      z-index: 3;
 
+      @media screen and (max-width: 600px) {
+          left: 0;
+      }
 
-
-    width: 78%;
-        &__leftArrow{
-          cursor: pointer;
-            position: absolute;
-        //   background-color:  red;
-          width: 100px;
-          top: 40%;
-          z-index: 3;
-          left: 4vw;
-          
-          @media screen and (max-width: 600px) {
-            left: 0vw; 
-            top: 40%;
-  
-         }
-         img{
-            height: 6vw;
-         }
-        
-        }
-        &__rightArrow{
-            position: absolute;
-        //   background-color:  red;
-          width: 100px;
-          top: 40%;
-          right:4vw;
-          @media screen and (max-width:600px) {
-            right : 0vw;
-            top: 40%;
-  
-         }
-          z-index: 3;
-          cursor: pointer;
-
-          img{
-            height: 6vw;
-          }
-          
-        
-        }
-
-        &__pageNumber{
-            position: absolute;
-            color: $secondary-color;
-            //   background-color:  red;
-              left: 50%;
-              bottom: 1vw;
-              z-index: 3;
-
-              @media screen and (max-width: 601px) {
-  visibility: hidden;
-              }
-        }
-        &__fade  {
-          opacity: 1;
-         
-          text-align: center;
-          z-index: 0;
+      img {
           height: 6vw;
-          // opacity: 0.8;
-          width: 100%;
-          position: absolute;
-          height: 411px;
-          border-radius: 25px;
-         background-color: rgb(88, 14, 14);
-         
-                } 
-    &__img{ z-index: 0;
-      z-index: 0;
-    height: 411px;
-    width: 90%;
-    object-fit: cover;
-    border-radius: 25px;
-    transition: opacity 0.5s ease; 
+      }
+  }
 
-    &.fade-in {
-        animation: fadeIn 0.5s ease-in; 
-    }
-    
+  // Flèche droite
+  &__rightArrow {
+      cursor: pointer;
+      position: absolute;
+      width: 100px;
+      top: 40%;
+      right: 4vw;
+      z-index: 3;
+
+      @media screen and (max-width: 600px) {
+          right: 0;
+      }
+
+      img {
+          height: 6vw;
+      }
+  }
+
+  // Numérotation des pages
+  &__pageNumber {
+      position: absolute;
+      color: $secondary-color;
+      left: 50%;
+      bottom: 1vw;
+      z-index: 3;
+
+      @media screen and (max-width: 601px) {
+          visibility: hidden;
+      }
+  }
+
+  // Image du carrousel
+  &__img {
+      z-index: 0;
+      height: 411px;
+      width: 90%;
+      object-fit: cover;
+      border-radius: 25px;
+      transition: opacity 0.5s ease;
+
+      &.fade-in {
+          animation: fadeIn 0.5s ease-in;
+      }
 
       @media screen and (max-width: 800px) {
           height: 37vh;
           width: 99%;
       }
+  }
 
-    }}
-
-    @keyframes fadeIn {
+  @keyframes fadeIn {
       0% {
           opacity: 0;
-          background-color: white; 
+          background-color: white;
       }
       100% {
           opacity: 1;
-          background-color: transparent; 
+          background-color: transparent;
       }
   }
+}
 
-  .hide {
-    visibility: hidden;
-  }
+// Cache les éléments inutiles si une seule image
+.hide {
+  visibility: hidden;
+}

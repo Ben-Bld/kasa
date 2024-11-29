@@ -1,60 +1,58 @@
-import left from '../../../assets/images/icons/left.svg';
-import right from '../../../assets/images/icons/right.svg';
+// Composant Slideshow : carrousel d'images avec navigation
+import left from "../../../assets/images/icons/left.svg";
+import right from "../../../assets/images/icons/right.svg";
 import { useState } from "react";
 
-export function Slideshow(props) {
-    let slider = props.slide;
+export function Slideshow({ slide }) {
+    const [slideValue, changeSlide] = useState(0); // Index de l'image actuelle
+    const [fade, setFade] = useState(false); // Gère l'effet de transition
+    const length = slide.length - 1; // Dernier index des images
 
-    const [slideValue, changeSlide] = useState(0);
-    const [fade, setFade] = useState(false);
-    let length = props.slide.length - 1;
-
+    // Passe à l'image suivante, ou revient à la première si on, arrive à la dernière
     function nextSlide() {
         setFade(true);
         setTimeout(() => {
             setFade(false);
-            if (slideValue < length) {
-                changeSlide(slideValue + 1);
-            } else {
-                changeSlide(0);
-            }
+            changeSlide(slideValue < length ? slideValue + 1 : 0);
         }, 500);
     }
 
+    // Passe à l'image précédente, ou revient à la dernière si retourne depuis la première
     function prevSlide() {
         setFade(true);
         setTimeout(() => {
             setFade(false);
-            if (slideValue > 0) {
-                changeSlide(slideValue - 1);
-            } else {
-                changeSlide(length);
-            }
+            changeSlide(slideValue > 0 ? slideValue - 1 : length);
         }, 500);
     }
 
-    function hideNext() {
-        if (length === 0) {
-            return "hide";
-        }
+    // Cache les flèches et la pagination si une seule image
+    function hideControls() {
+        return slide.length <= 1 ? "hide" : "";
     }
 
     return (
         <div className="container-slideshow">
-            <div className="container-slideshow__leftArrow">
-                <img onClick={prevSlide} src={left} className={`container__slideshow__leftArrow__file ` + hideNext()} />
-            </div>
-            <div className="container-slideshow__rightArrow">
-                <img onClick={nextSlide} src={right} className={`container__slideshow__rightArrow__file ` + hideNext()} />
-            </div>
-            <div className="container-slideshow__pageNumber ">
-                <p className={hideNext()}>{slideValue + 1}/{slider.length}</p>
+            {/* Flèche gauche */}
+            <div className={`container-slideshow__leftArrow ${hideControls()}`}>
+                <img onClick={prevSlide} src={left} alt="Précédent" />
             </div>
 
+            {/* Flèche droite */}
+            <div className={`container-slideshow__rightArrow ${hideControls()}`}>
+                <img onClick={nextSlide} src={right} alt="Suivant" />
+            </div>
+
+            {/* Pagination */}
+            <div className={`container-slideshow__pageNumber ${hideControls()}`}>
+                <p>{slideValue + 1}/{slide.length}</p>
+            </div>
+
+            {/* Image */}
             <img
                 className={`container-slideshow__img ${fade ? "fade-out" : "fade-in"}`}
-                src={slider[slideValue]}
-                alt=""
+                src={slide[slideValue]}
+                alt={`Slide ${slideValue + 1}`}
             />
         </div>
     );

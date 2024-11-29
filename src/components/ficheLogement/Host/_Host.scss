@@ -1,51 +1,39 @@
 .container-host {
-    display: flex;
+    display: flex; // Positionne le nom et l'avatar côte à côte
     width: 22%;
     margin-top: 2%;
     left: 6%;
     position: relative;
-    padding-bottom: 0.7%;
+    padding-bottom: 0.7%; 
 
-    
     @media screen and (max-width: 1850px) {
-        left:4%;
-    
-       }
+        left: 4%;
+    }
 
-       @media screen and (max-width: 1450px) {
-        left:2%;
-    
-       }
-
+    @media screen and (max-width: 1450px) {
+        left: 2%;
+    }
 
     @media screen and (max-width: 700px) {
-        left: 0%;
-        order: 3;
-        // margin-top: 20px;
-        // width: 40%;
-       }
- 
-&__name {
-
-        // width: 28%;
-        text-align: right !important;
-        // margin-right: 19%;
-        // padding-right: 9%;
-        padding-top: 4%;
-        @media screen and (max-width: 700px) {
-            font-size: 12px !important;
-           }
-        
-
-        
-     
+        left: 0%; // Pas de décalage sur mobile
+        order: 3; // Positionne après les autres éléments si utilisé dans un flex container
     }
-    &__avatar{
-        height: 64px;
-        margin-left: 6%;
-        border-radius: 50%;
+
+    &__name {
+        text-align: right !important; // Aligne le texte à droite
+        padding-top: 4%; // Décalage vertical pour alignement
+        @media screen and (max-width: 700px) {
+            font-size: 12px !important; // Réduction de la taille du texte sur mobile
+        }
+    }
+
+    &__avatar {
+        height: 64px; // Taille par défaut de l'avatar
+        margin-left: 6%; // Espacement à gauche du texte
+        border-radius: 50%; // Rend l'avatar circulaire
+
         @media screen and (max-width: 600px) {
-           height: 42px;
-          }
+            height: 42px; // Avatar réduit sur mobile
+        }
     }
 }

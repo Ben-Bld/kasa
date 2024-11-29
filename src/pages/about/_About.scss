@@ -1,14 +1,19 @@
+// Styles pour la page "À propos"
 .about {
     width: 100%;
+    margin-bottom: 12%;
 
-margin-bottom: 12%;
-    @media screen and (max-width: $breakpoint-desktop) {
-        &__banner div{   max-height: 311px;
-            background-color: transparent;
+    // Styles pour la bannière
+    &__banner {
+        @media screen and (max-width: $breakpoint-desktop) {
+            div {
+                max-height: 311px;
+                background-color: transparent;
+            }
+
+            img:first-child {
+                max-height: 311px;
+            }
         }
-      
-        &__banner img:first-child{  
-            max-height: 311px;
-        }
-}
+    }
 }
