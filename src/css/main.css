@@ -366,14 +366,14 @@ html {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  visibility: hidden; /* Hide the element visually and from screen readers */
+  visibility: hidden;
   max-width: 1023px;
   min-width: 40%;
   background-color: #F6F6F6;
   color: #ff6060;
   border-radius: 5px;
   font-size: 24px;
-  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s linear 0.4s; /* Delay visibility change until after the transition */
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s linear 0.4s;
 }
 @media screen and (max-width: 769px) {
   .collapse__text {
@@ -381,12 +381,11 @@ html {
   }
 }
 .collapse__text.show {
-  padding: 15px 9px 20px; /* Adjust padding for visible content */
+  padding: 15px 9px 20px;
   max-height: 400px;
   opacity: 1;
-  visibility: visible; /* Make the element visible */
-  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s linear 0s; /* No delay for showing */
-  margin-bottom: 20px;
+  visibility: visible;
+  transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s linear 0s;
 }
 
 .banner {
