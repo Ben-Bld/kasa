@@ -38,39 +38,30 @@
 
     &__text {
         margin: auto;
-        display: none; // Masqué par défaut
-        padding: 15px 9px 0px;
-        max-height: 0; // Pas de hauteur par défaut
-        overflow: hidden; // Masque le contenu débordant
-        opacity: 0; // Rendu invisible
+        padding: 0 9px;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden; /* Hide the element visually and from screen readers */
         max-width: 1023px;
         min-width: 40%;
         background-color: $secondary-color;
         color: $primary-color;
-        border-radius: 5px; // Coins arrondis
+        border-radius: 5px;
         font-size: 24px;
-        @media screen and (max-width: 600px) {
-                margin-bottom: 20%;
-        }
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s linear 0.4s; /* Delay visibility change until after the transition */
+    
         @media screen and (max-width: $breakpoint-desktop) {
-            min-width: 50%; // S'adapte aux petits écrans
-        }
-
-        transition: max-height 0.4s ease, opacity 0.4s ease; 
-        @media screen and (max-width: $breakpoint-desktop) {
-            font-size: 13px; 
+            font-size: 13px;
         }
          
         &.show {
-            padding-bottom: 20px;
-            display: flex;
+            padding: 15px 9px 20px; /* Adjust padding for visible content */
             max-height: 400px;
             opacity: 1;
-            margin-bottom: 20px;           
-           
-            // min-height: 180px;
-            // width: fit-content;
-            height: fit-content;
+            visibility: visible; /* Make the element visible */
+            transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out, visibility 0s linear 0s; /* No delay for showing */
+            margin-bottom: 20px;
         }
 
     }}
